@@ -21,9 +21,10 @@ public class shouldResolve {
 
     @Test
     public void concreteClassWithDefaultConstructor() {
-        withDefaultConstructor target = resolver.resolve(withDefaultConstructor.class);
+        Object target = resolver.resolve(withDefaultConstructor.class);
 
         assertThat(target).isNotNull();
+        assertThat(target).isInstanceOf(withDefaultConstructor.class);
     }
 
     @Test
@@ -44,5 +45,6 @@ public class shouldResolve {
         assertThat(target.getArg3()).withFailMessage("did not inject arg3").isNotNull();
 
     }
+
 }
 

@@ -22,3 +22,15 @@
 2015-12-22 00:01:29,789 INFO c.t.Resolver [main] resolving 'com.toyioc.concreteClass.withDefaultConstructor' 
 2015-12-22 00:01:29,790 INFO c.t.Resolver [main] resolved 'com.toyioc.concreteClass.withMultipleConcreteConstructorArgs' using 'public com.toyioc.concreteClass.withMultipleConcreteConstructorArgs(com.toyioc.concreteClass.withDefaultConstructor,com.toyioc.concreteClass.withDefaultConstructor,com.toyioc.concreteClass.withDefaultConstructor)' 
 2015-12-22 00:01:29,792 INFO c.t.Resolver [main] resolving 'com.toyioc.concreteClass.withDefaultConstructor' 
+2015-12-22 00:23:08,144 INFO c.t.Resolver [main] resolving 'com.toyioc.concreteClass.withDefaultConstructor' 
+2015-12-22 00:23:50,744 INFO c.t.Resolver [main] resolving 'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:23:50,745 INFO c.t.Resolver [main] no default constructor 
+2015-12-22 00:24:35,351 INFO c.t.Resolver [main] resolving 'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:24:35,356 INFO c.t.Resolver [main] no default constructor 
+2015-12-22 00:30:44,793 INFO c.t.Resolver [main] resolving 'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:30:44,794 INFO c.t.Resolver [main] resolveByDefaultConstructor 'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:30:44,794 INFO c.t.Resolver [main] no default constructor 
+2015-12-22 00:30:44,794 INFO c.t.Resolver [main] resolveByCustomeConstructor 'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:30:44,795 INFO c.t.Resolver [main] resolveByMap'com.toyioc.interfaces.IRegisteredInterface' 
+2015-12-22 00:30:44,795 INFO c.t.Resolver [main] resolving 'com.toyioc.interfaces.ImplementsIRegisteredInterface' 
+2015-12-22 00:30:44,795 INFO c.t.Resolver [main] resolveByDefaultConstructor 'com.toyioc.interfaces.ImplementsIRegisteredInterface' 
