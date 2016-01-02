@@ -1,4 +1,4 @@
-package com.toyioc.interfaces;
+package com.toyioc.constructs;
 
 public interface IRegisteredInterface {
 }

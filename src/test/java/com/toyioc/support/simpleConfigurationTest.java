@@ -1,3 +1,5 @@
+package com.toyioc.support;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -5,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class SimpleConfigurationTest {
+public class simpleConfigurationTest {
 
     @Test
     public void ShouldSupportStream() {

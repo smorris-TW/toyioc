@@ -1,9 +1,7 @@
 package com.toyioc;
 
 
-import com.toyioc.concreteClass.withDefaultConstructor;
-import com.toyioc.concreteClass.withMultipleConcreteConstructorArgs;
-import com.toyioc.concreteClass.withOneConcreteConstructorArg;
+import com.toyioc.constructs.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,15 +19,15 @@ public class shouldResolve {
 
     @Test
     public void concreteClassWithDefaultConstructor() {
-        Object target = resolver.resolve(withDefaultConstructor.class);
+        Object target = resolver.resolve(concreteClassWithDefaultConstructor.class);
 
         assertThat(target).isNotNull();
-        assertThat(target).isInstanceOf(withDefaultConstructor.class);
+        assertThat(target).isInstanceOf(concreteClassWithDefaultConstructor.class);
     }
 
     @Test
     public void concreteClassWithOneConcreteConstructorArg() {
-        withOneConcreteConstructorArg target = resolver.resolve(withOneConcreteConstructorArg.class);
+        concreteClassWithOneConcreteConstructorArg target = resolver.resolve(concreteClassWithOneConcreteConstructorArg.class);
 
         assertThat(target).isNotNull();
         assertThat(target.getArg1()).withFailMessage("did not inject arg1").isNotNull();
@@ -37,13 +35,24 @@ public class shouldResolve {
 
     @Test
     public void concreteClassWithMultipleConcreteConstructorArgs() {
-        withMultipleConcreteConstructorArgs target = resolver.resolve(withMultipleConcreteConstructorArgs.class);
+        concreteClassWithMultipleConcreteConstructorArgs target = resolver.resolve(concreteClassWithMultipleConcreteConstructorArgs.class);
 
         assertThat(target).isNotNull();
         assertThat(target.getArg1()).withFailMessage("did not inject arg1").isNotNull();
         assertThat(target.getArg2()).withFailMessage("did not inject arg2").isNotNull();
         assertThat(target.getArg3()).withFailMessage("did not inject arg3").isNotNull();
 
+    }
+
+    @Test
+    public void concreteClassViaRegisteredInterface() {
+        resolver.register(
+                IRegisteredInterface.class,
+                concreteClassWithInterface.class);
+        Object target = resolver.resolve(IRegisteredInterface.class);
+
+        assertThat(target).isNotNull();
+        assertThat(target).isInstanceOf(concreteClassWithInterface.class);
     }
 
 }

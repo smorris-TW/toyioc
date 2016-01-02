@@ -97,7 +97,7 @@ public class Resolver {
 
     private HashMap<Class, Class> mappings = new HashMap<>();
 
-    public <I,C> void addMapping(
+    public <I,C> void register(
             Class<I> interfaceToRegister,
             Class<C> implementationClass) {
 
