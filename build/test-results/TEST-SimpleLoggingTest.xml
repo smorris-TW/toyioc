@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SimpleLoggingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-12-21T14:00:19" hostname="smorris-laptop-2.local" time="0.024">
-  <properties/>
-  <testcase name="ShouldLogSomething" classname="SimpleLoggingTest" time="0.024"/>
-  <system-out><![CDATA[2015-12-22 00:00:19,057 INFO SimpleLoggingTest [Test worker] Hello World 
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
